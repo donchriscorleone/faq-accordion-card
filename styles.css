@@ -1,0 +1,173 @@
+:root {
+    /* Text */
+    --very-dark-des-blue:  hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+
+    /* Gradient */
+    --soft-violet:hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+
+    /* #### Text */
+    --very-dark-gray-blue:hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    
+    /* #### Dividers */
+    --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+*, ::before, ::after {
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(var(--soft-violet),var(--soft-blue));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: var(--light-grayish-blue);
+    width: 69%;
+    margin: 15vh auto 0;
+    border-radius: 15px;
+    
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 50px;
+}
+
+
+.faq {
+    padding: 50px;
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.question {
+    padding: 12px;
+    border-bottom: 1px solid var(--dark-grayish-blue);
+    color: var(--dark-grayish-blue);
+
+    width: 85%;
+}
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown h3 {
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.answer {
+    padding: 5px;
+    display: none;
+}
+
+.answer p {
+    font-size: 1.1em;
+}
+
+.dropdown-button {
+}
+
+.up-arrow {
+    transform: rotate(-180deg);
+}
+
+.question-active {
+    color: black;
+    font-weight: 700;
+}
+
+.woman {
+    z-index: 5;
+    position: relative;
+    left: -30px;
+    top: 90px;
+    width: 400px;
+    height: 310px;
+}
+
+.box {
+    z-index: 6;
+    position: relative;
+    left: -80px;
+    top: -115px;
+}
+
+.pattern {
+    z-index: 2;
+    position: absolute;
+    width: 800px;
+    height: 700px;
+    left: -200px;
+    top: -40px;
+}
+
+@media screen and (min-width: 345px) and (max-width: 750px) {
+    .container {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2% 98%;
+        margin: 85px auto 0;
+        width: 80%;
+        gap: 0;
+    }
+    .woman {
+        left: 60px;
+        top: -80px;
+        width: 180px;
+        height: 140px;
+    }
+    
+    .box {
+        z-index: 6;
+        position: relative;
+        left: -150px;
+        top: -80px;
+        width: 100px;
+    }
+    
+    .pattern {
+        z-index: 7;
+        position: absolute;
+        width: 180px;
+        height: 170px;
+        left: 100px;
+        top: -40px;
+    }
+
+    .faq {
+        padding: 25px;
+        margin-top: 20px;
+        width: 85%;
+    }
+
+    .title {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .title {
+        text-align: center;
+    }
+}
